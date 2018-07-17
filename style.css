@@ -1,0 +1,63 @@
+html, body {
+  font-family: 'Nunito', sans-serif;
+  background: url("mountains.jpg") repeat fixed;
+  background-position: center; }
+
+*, ::before, ::after {
+  box-sizing: border-box; }
+
+h1 {
+  font-size: 45pt;
+  font-weight: 800;
+  color: white; }
+
+#panel {
+  background-color: #546878;
+  max-width: 400px;
+  color: white;
+  margin: auto;
+  padding: 40px; }
+
+.tabs {
+  list-style-type: none;
+  font-size: 25pt;
+  font-weight: 700;
+  text-align: center;
+  padding: 0;
+  margin: 0 0 10px 0; }
+
+h2 {
+  font-weight: 400;
+  font-size: 16pt;
+  text-align: center; }
+
+.field-wrap {
+  position: relative; }
+  .field-wrap input {
+    border: none;
+    background: transparent;
+    border-bottom: solid 2px white;
+    width: 100%;
+    font-size: 18pt;
+    font-weight: 400;
+    color: white;
+    padding-left: 10px;
+    margin: 0 0 20px 0; }
+
+label {
+  position: absolute;
+  font-size: 18pt;
+  font-weight: 400;
+  padding-left: 10px; }
+
+button {
+  width: 100%;
+  margin: 20px 0;
+  border: none;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #39b54a;
+  color: white;
+  font-size: 15pt; }
+
+/*# sourceMappingURL=style.css.map */
