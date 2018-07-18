@@ -14,30 +14,62 @@ html, body {
   box-sizing: border-box;
 }
 
+@media (max-width: 720px) {
+  #logo {
+    display: none;
+    transition: .5s all;
+  }
+  #panel {
+    background-color: rgba(#32415d, 0.9);
+    max-width: 400px;
+    max-height: 500px;
+    color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 40px;
+    transition: .5s all;
+  }
+  .tabs {
+    font-size: 20pt;
+    transition: .5s all;
+  }
+}
+
+@media (min-width: 721px) {
+  #panel {
+    background: $background;
+    max-width: 400px;
+    max-height: 500px;
+    color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 40px;
+    transition: .5s all;
+  }
+  .tabs {
+    font-size: 25pt;
+    transition: .5s all;
+  }
+}
+
 h1 {
   font-size: 45pt;
   font-weight: 800;
   color: white;
 }
 
-#panel {
-  background: $background;
-  max-width: 400px;
-  max-height: 500px;
-  color: white;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  padding: 40px;
-  transition: height 2s;
-}
+
 
 .tabs {
   list-style-type: none;
-  font-size: 25pt;
   font-weight: 700;
   text-align: center;
   padding: 0;
