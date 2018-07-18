@@ -1,5 +1,6 @@
 $bluegrey: #546878;
 $seagreen: #39b54a;
+$lakeblue: #6891b4;
 
 html, body {
   font-family: 'Nunito', sans-serif;
@@ -32,6 +33,15 @@ h1 {
   text-align: center;
   padding: 0;
   margin: 0 0 10px 0;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $lakeblue;
+    text-decoration: none;
+  }
 }
 
 .hide {
