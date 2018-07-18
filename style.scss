@@ -1,6 +1,8 @@
-$bluegrey: #546878;
-$seagreen: #39b54a;
-$lakeblue: #6891b4;
+$background: radial-gradient(at top center, #556c8f 0%, #32415d 120%);
+$seagreen: #95b258;
+$seagreenshade: #849d4e;
+$childbg: #5a7294;
+$alttext: #98b9e5;
 
 html, body {
   font-family: 'Nunito', sans-serif;
@@ -19,11 +21,18 @@ h1 {
 }
 
 #panel {
-  background-color: $bluegrey;
+  background: $background;
   max-width: 400px;
+  max-height: 500px;
   color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   margin: auto;
   padding: 40px;
+  transition: height 2s;
 }
 
 .tabs {
@@ -36,10 +45,11 @@ h1 {
 
   a {
     color: white;
+    opacity: 0.5;
     text-decoration: none;
   }
   a:hover {
-    color: $lakeblue;
+    opacity: 1;
     text-decoration: none;
   }
 }
@@ -54,6 +64,9 @@ h1 {
 
 .underline {
   border-bottom: solid 2px white;
+  a {
+    opacity: 1;
+  }
 }
 
 h2 {
@@ -67,22 +80,35 @@ h2 {
   position: relative;
   input {
     border: none;
+    outline: none;
     background: transparent;
-    border-bottom: solid 2px white;
+    border-radius: 15px;
+    background-color: $childbg;
     width: 100%;
     font-size: 18pt;
     font-weight: 400;
     color: white;
-    padding-left: 10px;
+    padding-left: 20px;
     margin: 0 0 20px 0;
   }
 }
 
 label {
   position: absolute;
+  top: 0;
   font-size: 18pt;
   font-weight: 400;
-  padding-left: 10px;
+  padding-left: 20px;
+  color: $alttext;
+  z-index: 1;
+  transition: ease .2s;
+}
+
+.field-wrap input:focus ~ label, .field-wrap input:valid ~ label {
+  top: -22px;
+  left: -10px;
+  font-size: 12pt;
+  transition: ease .2s;
 }
 
 button {
@@ -94,4 +120,11 @@ button {
   background-color: $seagreen;
   color: white;
   font-size: 15pt;
+  border-bottom: 3px solid $seagreenshade;
+  transition: ease .2s;
+  &:active {
+    border-bottom: 0px solid $seagreenshade;
+    transition: ease .2s;
+    outline: none;
+  }
 }

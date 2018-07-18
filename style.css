@@ -12,11 +12,18 @@ h1 {
   color: white; }
 
 #panel {
-  background-color: #546878;
+  background: radial-gradient(at top center, #556c8f 0%, #32415d 120%);
   max-width: 400px;
+  max-height: 500px;
   color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   margin: auto;
-  padding: 40px; }
+  padding: 40px;
+  transition: height 2s; }
 
 .tabs {
   list-style-type: none;
@@ -27,9 +34,10 @@ h1 {
   margin: 0 0 10px 0; }
   .tabs a {
     color: white;
+    opacity: 0.5;
     text-decoration: none; }
   .tabs a:hover {
-    color: #6891b4;
+    opacity: 1;
     text-decoration: none; }
 
 .hide {
@@ -40,6 +48,8 @@ h1 {
 
 .underline {
   border-bottom: solid 2px white; }
+  .underline a {
+    opacity: 1; }
 
 h2 {
   font-weight: 400;
@@ -51,20 +61,32 @@ h2 {
   position: relative; }
   .field-wrap input {
     border: none;
+    outline: none;
     background: transparent;
-    border-bottom: solid 2px white;
+    border-radius: 15px;
+    background-color: #5a7294;
     width: 100%;
     font-size: 18pt;
     font-weight: 400;
     color: white;
-    padding-left: 10px;
+    padding-left: 20px;
     margin: 0 0 20px 0; }
 
 label {
   position: absolute;
+  top: 0;
   font-size: 18pt;
   font-weight: 400;
-  padding-left: 10px; }
+  padding-left: 20px;
+  color: #98b9e5;
+  z-index: 1;
+  transition: ease .2s; }
+
+.field-wrap input:focus ~ label, .field-wrap input:valid ~ label {
+  top: -22px;
+  left: -10px;
+  font-size: 12pt;
+  transition: ease .2s; }
 
 button {
   width: 100%;
@@ -72,8 +94,14 @@ button {
   border: none;
   height: 40px;
   border-radius: 20px;
-  background-color: #39b54a;
+  background-color: #95b258;
   color: white;
-  font-size: 15pt; }
+  font-size: 15pt;
+  border-bottom: 3px solid #849d4e;
+  transition: ease .2s; }
+  button:active {
+    border-bottom: 0px solid #849d4e;
+    transition: ease .2s;
+    outline: none; }
 
 /*# sourceMappingURL=style.css.map */
