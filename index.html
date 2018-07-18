@@ -9,6 +9,8 @@
   <link href="style.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+  <script src="tabswitch.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -18,16 +20,16 @@
 
   <div id="panel">
     <ul class="tabs row">
-      <li class="tab col-6 tab-active">
-        <a href="#sign-up">Sign in</a>
+      <li class="tab col-6 active underline">
+        <a href="#sign-in">Sign in</a>
       </li>
       <li class="tab col-6">
-        <a href="#sign-in">Sign up</a>
+        <a href="#sign-up">Sign up</a>
       </li>
     </ul>
 
     <div id="tab-group">
-      <div id="sign-in">
+      <div id="sign-in" class="active">
         <h2>Welcome back :)</h2>
         <form>
           <div class="field-wrap">
@@ -46,7 +48,7 @@
         </form>
       </div>
 
-      <div id="sign-up">
+      <div id="sign-up" class="hide">
         <h2>Create account</h2>
         <form>
           <div class="field-wrap">

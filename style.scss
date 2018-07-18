@@ -34,7 +34,15 @@ h1 {
   margin: 0 0 10px 0;
 }
 
-.tab-active {
+.hide {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.underline {
   border-bottom: solid 2px white;
 }
 
